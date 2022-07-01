@@ -1,0 +1,443 @@
+    /* CSS Document */
+
+body {
+    font-size: 12px;
+    color: #1b4f9a;
+    /*background:#EEFCFF;背景颜色*/
+}
+
+input,
+textarea,
+select {
+    border: 1px solid #aaa;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid #72adfc;
+}
+
+
+/*=按钮=*/
+
+input.btn {
+    background: url(../images/btn_bg.jpg) left center repeat-x;
+    color: #333333;
+    font-family: Arial, "宋体", sans-serif;
+    vertical-align: middle;
+    padding: 0px 12px;
+}
+
+
+/*修正ie6按钮样式*/
+
+* html input.btn {
+    padding: 3px 3px 0 3px;
+}
+
+*+html input.btn {
+    padding: 3px 3px 0 3px;
+}
+
+textarea {
+    width: 500px;
+    height: 100px;
+    /*=调试用,可以删除=*/
+}
+
+#Panel_Content a {
+    color: #1B4F9A;
+}
+
+#Panel_Content a:hover {
+    color: #f00;
+}
+
+#Panel_Content {
+    width: 100%;
+    margin: 0 auto;
+    line-height: 28px;
+    text-align: left;
+}
+
+#Panel_Content #lbTrainExp {}
+
+#Panel_Content #lbTrainExp ul {
+    list-style: none;
+    width: 100%
+}
+
+#Panel_Content #lbTrainExp ul li {
+    float: left;
+    padding: 5px;
+}
+
+
+/*=当前位置=*/
+
+#Panel_Content .location {
+    background: #EEFCFF;
+    color: #1B4F9A;
+    line-height: 2em;
+    padding-left: 12px;
+    border-bottom: 1px solid #B8CDEA;
+}
+
+
+/*=栏目列表=*/
+
+.add_con {
+    width: 97%;
+    margin: 9px auto;
+    border: 1px solid #B8CDEA;
+    color: #1B4F9A;
+}
+
+#Panel_Content .columnList {
+    width: 97%;
+    margin: 9px auto;
+    border: 1px solid #B8CDEA;
+    color: #1B4F9A;
+    position: relative;
+}
+
+#Panel_Content .columnList a {
+    margin: 0 6px;
+}
+
+#Panel_Content .columnList a.current {
+    color: #f00;
+}
+
+#Panel_Content .columnList span.btnList {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+    margin: 0 6px;
+}
+
+
+/*=页码=*/
+
+#Panel_Content .page {
+    text-align: right;
+    width: 97%;
+    margin: 0 auto;
+    font-family: "宋体";
+}
+
+#Panel_Content .page input {
+    width: 24px;
+}
+
+
+/*=搜索=*/
+
+#Panel_Content .search {
+    width: 97%;
+    margin: 0 auto;
+}
+
+#Panel_Content .search input#txtSearch {
+    height: 20px;
+    margin: 0 2px;
+}
+
+
+/*=帮助=*/
+
+#Panel_Content a.help:hover {
+    color: #666;
+}
+
+.helpTips {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+
+/*隐藏点击帮助后出现的虚线框*/
+
+.helpTips a {
+    hide-focus: expression(this.hideFocus=true);
+    /* for ie 5+ */
+    outline: none;
+    /* for firefox 1.5 + */
+}
+
+.helpTips div {
+    position: absolute;
+    font-size: 12px;
+    z-index: 99;
+    display: none;
+    line-height: 1.5em;
+    text-align: left;
+    padding: 16px 2px 2px 2px;
+    background-color: #ccF6FF;
+    border: 1px solid #ccc;
+    /*透明*/
+    filter: alpha(opacity=95);
+    /* IE */
+    -moz-opacity: 0.95;
+    /* Moz + FF */
+    opacity: 0.95;
+    /*支持CSS3的浏览器（FF 1.5也支持）*/
+    /*定位*/
+    top: 16px;
+}
+
+.helpTips table {
+    line-height: 25px;
+    background: #fff;
+}
+
+#Panel_Content .helpTips a.closeBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0 3px;
+    font-size: 14px;
+    line-height: 1em;
+    font-weight: normal;
+    background: #fff;
+    color: green;
+    float: right;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    border: 1px solid #08a;
+}
+
+#Panel_Content .tblList .operation a.closeBtn {
+    margin: 0;
+}
+
+#Panel_Content .helpTips a.closeBtn:hover {
+    text-decoration: none;
+}
+
+
+/*========列表&表单&提示 共用=========*/
+
+#Panel_Content .tblList,
+#Panel_Content .tblForm,
+#errorTip {
+    width: 97%;
+    border: 1px solid #B8CDEA;
+    line-height: 28px;
+    border-collapse: collapse;
+    /*=合并表格内外边框=*/
+    background: #fff;
+}
+
+#Panel_Content .tblList th,
+#Panel_Content .tblList td,
+#Panel_Content .tblForm th,
+#Panel_Content .tblForm td {
+    padding: 0 6px;
+    border: 1px solid #B8CDEA;
+}
+
+#Panel_Content .tblList th,
+#Panel_Content .tblForm th {
+    font-weight: normal;
+    color: #0b4f9a;
+}
+
+
+/*========列表=========*/
+
+#Panel_Content .tblList {
+    margin: 9px auto;
+}
+
+#Panel_Content .tblList th {
+    text-align: center;
+    background: #EEFCFF;
+}
+
+#Panel_Content .tblList .operation,
+#Panel_Content .tblList .time {
+    text-align: center;
+}
+
+#Panel_Content .tblList .operation a {
+    margin: 0 6px;
+}
+
+
+/*========表单=========*/
+
+#Panel_Content .tblForm {
+    margin: 0 auto 18px auto;
+}
+
+#Panel_Content .tblForm caption {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 18px;
+}
+
+* html #Panel_Content .tblForm {
+    margin-top: 18px;
+}
+
+#Panel_Content a.help {
+    color: #333;
+}
+
+#Panel_Content .tblForm th {
+    text-align: right;
+    width: 120px;
+}
+
+
+/*=隔行背景颜色=
+#Panel_Content .tblForm .alt{ background:#fafafa;}*/
+
+
+/*========错误提示========*/
+
+#errorTip {
+    margin: 18px auto;
+    text-align: left;
+}
+
+#errorTip p {
+    border-bottom: 1px solid #B8CDEA;
+    padding: 0 1em;
+}
+
+#errorTip p.reason {
+    padding: 1em 2em;
+}
+
+#errorTip p.reason span {
+    display: block;
+    color: blue
+}
+
+#errorTip p.reason span#td_Message {
+    color: #1B4F9A
+}
+
+
+/*============蒯伟加的样式，为了邀请函的样式==============*/
+
+#Panel_Show a {
+    color: #1B4F9A;
+}
+
+#Panel_Show a:hover {
+    color: #f00;
+}
+
+#Panel_Show {
+    width: 100%;
+    margin: 0 auto;
+    line-height: 28px;
+    text-align: left;
+}
+
+
+/*=当前位置=*/
+
+#Panel_Show .location {
+    background: #EEFCFF;
+    color: #1B4F9A;
+    line-height: 2em;
+    padding-left: 12px;
+    border-bottom: 1px solid #B8CDEA;
+}
+
+
+/*=栏目列表=*/
+
+#Panel_Show .columnList {
+    width: 97%;
+    margin: 9px auto;
+    border: 1px solid #B8CDEA;
+    color: #1B4F9A;
+    position: relative;
+}
+
+#Panel_Show .columnList a {
+    margin: 0 6px;
+}
+
+#Panel_Show .columnList a.current {
+    color: #f00;
+}
+
+#Panel_Show .columnList span.btnList {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+    margin: 0 6px;
+}
+
+#Panel_Show .tblList th,
+#Panel_Show .tblList td,
+#Panel_Show .tblForm th,
+#Panel_Show .tblForm td {
+    padding: 0 6px;
+    border: 1px solid #B8CDEA;
+}
+
+#Panel_Show .tblList th,
+#Panel_Show .tblForm th {
+    font-weight: normal;
+    color: #0b4f9a;
+}
+
+
+/*========列表=========*/
+
+#Panel_Show .tblList {
+    margin: 9px auto;
+}
+
+#Panel_Show .tblList th {
+    text-align: center;
+    background: #EEFCFF;
+}
+
+#Panel_Show .tblList .operation,
+#Panel_Show .tblList .time {
+    text-align: center;
+}
+
+#Panel_Show .tblList .operation a {
+    margin: 0 6px;
+}
+
+
+/*========表单=========*/
+
+#Panel_Show .tblForm {
+    margin: 0 auto 18px auto;
+}
+
+#Panel_Show .tblForm caption {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 18px;
+}
+
+* html #Panel_Show .tblForm {
+    margin-top: 18px;
+}
+
+#Panel_Content a.help {
+    color: #333;
+}
+
+#Panel_Show .tblForm th {
+    text-align: right;
+    width: 120px;
+    ———————————————— 版权声明：本文为CSDN博主「abc_7」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。 原文链接：https: //blog.csdn.net/abc_7/article/details/5662433
